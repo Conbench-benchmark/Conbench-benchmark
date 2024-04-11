@@ -132,17 +132,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large vision-language models (LVLMs) have recently achieved rapid progress, sparking numerous studies to evaluate their multi-modal capabilities.
-            However, we dig into current evaluation works and identify two primary issues: 
-            <br /><b>1) Visual content is unnecessary for many samples.</b> The answers can be directly inferred from the questions and options, or the world knowledge embedded in LLMs. This phenomenon is prevalent across current benchmarks. For instance, GeminiPro achieves 42.9% on the MMMU benchmark without any visual input, and outperforms the random choice baseline across six benchmarks over 20% on average.
-            <br /><b>2) Unintentional data leakage exists in LLM and LVLM training.</b> LLM and LVLM could still answer some visual-necessary questions without visual content, indicating the memorizing of these samples within large-scale training data. For example, Sphinx-X-MoE gets 43.6% on MMMU without accessing images, surpassing its LLM backbone with 17.9%.
-            <br /><b>Both problems lead to misjudgments of actual multi-modal performance gains and potentially misguide the study of LVLM.</b> 
-            <br />
-            <br />To this end, we present <b>MMStar</b>, an elite vision-indispensable multi-modal benchmark comprising 1,500 challenge samples meticulously selected by humans. MMStar is designed to benchmark 6 core capabilities and 18 detailed axes, aiming to evaluate the multi-modal capacities of LVLMs with a carefully balanced and purified selection of samples.
-            The samples are first roughly selected from current benchmarks with an automated pipeline, strict human review is then involved to ensure each selected sample exhibits visual dependency, minimal data leakage, and requires advanced multi-modal capabilities for the solution.
-            In addition to the traditional accuracy metric, we also develop two metrics to measure data leakage and actual performance gain in multi-modal training. 
-            We evaluate 16 leading LVLMs on our MMStar to assess their multi-modal capabilities, and on 7 benchmarks with the newly proposed metrics to investigate their data leakage and actual multi-modal gain. 
-            We hope these efforts can serve as a valuable addition to the research community in evaluating LVLMs.
+            At present, mainstream benchmarks evaluate VLM, mainly calculating the accuracy through closed-set question and answer methods (such as judgment, selection, etc.), which limits the answer range of the model; 
+            however, for the Caption ability evaluation that everyone is most concerned about, because the solution space is too large, resulting in the academic community still not having a better measurement method. 
+            Therefore, we proposed ConBench: First, we found that for the same knowledge point in the picture, VLM had inconsistencies (or even complete opposites) in different types of answers; 
+            then, we designed and built ConBench to explore the relationship between various answer forms and captions. Degree of correlation; 
+            finally, we further improved the correlation and established the correlation between Discriminative and Generative Benchmarks, 
+            which can quantitatively evaluate the Caption ability of VLM through Discriminative question and answer.
           </p>
         </div>
       </div>
