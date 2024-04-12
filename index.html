@@ -174,8 +174,8 @@
             </centering>
             <br />(a) When the Model SEED describes the picture, it thinks the bottle is purple; but when asked if the bottle is white, it says yes.
             <br />(b) When the Qwen-VL-Plus describes the picture, it thinks there are 2 cats; but when asked how many cats there are, it says there is 1.
-            <br />(c) When the LLaVA-7B describes the picture, it thinks it is a dinosaur played by a person; <br /> but when asked if it is a dinosaur played by a person, it says no. 
-            <br />(d) Ask the Model SEED if the movie in the poster was directed by David, and it says yes; <br /> but ask it who directed the movie in the poster, and it says Wu Jing.
+            <br />(c) When the LLaVA-7B describes the picture, it thinks it is a dinosaur played by a person; but when asked if it is a dinosaur played <br /> by a person, it says no. 
+            <br />(d) Ask the Model SEED if the movie in the poster was directed by David, and it says yes; but ask it who directed the movie <br /> in the poster, and it says Wu Jing.
           </b></p>
 <!--           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
@@ -241,20 +241,18 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p><b>
-<!--             After applying the coarse filter process and manual review, we narrow down from a total of 22,401 samples to 11,607 candidate samples and finally select 1,500 high-quality samples to construct our MMStar benchmark. -->
+            After applying the GPT-4V process and manual review, we finally selected 1,000 high-quality samples with 3,000 QAs to construct our ConBench benchmark.
             <centering>
               <div style="text-align: center;">
                 <img id="teaser" width="90%" src="images/data_source.png">     
               </div>
             </centering>
             <br>
-<!--             In MMStar, we display 6 core
-            capabilities in the inner ring, with 18 detailed axes presented in the outer ring. The middle ring showcases the
-            number of samples for each detailed dimension. Each core capability contains a meticulously balanced 250
-            samples. We further ensure a relatively even distribution across the 18 detailed axes. -->
+            In ConBench, we display 3 core capabilities in the inner ring, with 19 detailed axes presented in the outer ring. The middle ring showcases the
+            sub-capabilities for each detailed dimension.
             <centering>
               <div style="text-align: center;">
-                <img id="teaser" width="60%" src="images/bing1.png">     
+                <img id="teaser" width="65%" src="images/bing1.png">     
               </div>
             </centering>
           </b></p>
